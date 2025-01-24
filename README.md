@@ -36,11 +36,10 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
   - Set the Virtual Pin (Vx) for the widget (e.g., V0).
 
 **4. Write the Arduino Code**
-Here’s an example code to read gas sensor data and send it to Blynk:
-
-  #define BLYNK_TEMPLATE_ID "YourTemplateID"
-  #define BLYNK_DEVICE_NAME "YourDeviceName"
-  #define BLYNK_AUTH_TOKEN "YourAuthToken"
+_Here’s an example code to read gas sensor data and send it to Blynk:_
+#define BLYNK_TEMPLATE_ID "YourTemplateID"
+#define BLYNK_DEVICE_NAME "YourDeviceName"
+#define BLYNK_AUTH_TOKEN "YourAuthToken"
   
   #include <ESP8266WiFi.h>
   #include <BlynkSimpleEsp8266.h>

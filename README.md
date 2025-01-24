@@ -3,29 +3,29 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
 
 
 **Hardware Requirements:**
-  Gas Sensor (e.g., MQ-2 for LPG, CO, and smoke detection)
-  Microcontroller (e.g., ESP8266 NodeMCU or ESP32)
-  Breadboard and jumper wires
-  USB cable for programming
-  Power supply (if needed)
+  -Gas Sensor (e.g., MQ-2 for LPG, CO, and smoke detection)
+  -Microcontroller (e.g., ESP8266 NodeMCU or ESP32)
+  -Breadboard and jumper wires
+  -USB cable for programming
+  -Power supply (if needed)
 
 
 **Steps to Display Gas Sensor Data in Blynk**
   
   1. Set up the Gas Sensor
-    Connect the gas sensor to the microcontroller:
-    VCC to 3.3V or 5V (depending on the sensor specs)
-    GND to Ground
-    AO (Analog Output) to an Analog pin on the microcontroller (e.g., A0 on ESP8266).
+    -Connect the gas sensor to the microcontroller:
+    -VCC to 3.3V or 5V (depending on the sensor specs)
+    -GND to Ground
+    -AO (Analog Output) to an Analog pin on the microcontroller (e.g., A0 on ESP8266).
   
   2. Install Necessary Software
-    Download and install the Arduino IDE.
-    Install the required libraries:
-    Blynk Library: Go to Arduino IDE → Tools → Manage Libraries → Search for “Blynk” and install it.
-    ESP8266/ESP32 Board Package: Add the board URL in Arduino IDE (File → Preferences → Additional Board Manager URLs):
-    ESP8266: http://arduino.esp8266.com/stable/package_esp8266com_index.json
-    ESP32: https://dl.espressif.com/dl/package_esp32_index.json
-    Go to Tools → Boards Manager → Install the respective board package.
+    -Download and install the Arduino IDE.
+    -Install the required libraries:
+    -Blynk Library: Go to Arduino IDE → Tools → Manage Libraries → Search for “Blynk” and install it.
+    -ESP8266/ESP32 Board Package: Add the board URL in Arduino IDE (File → Preferences → Additional Board Manager URLs):
+    -ESP8266: http://arduino.esp8266.com/stable/package_esp8266com_index.json
+    -ESP32: https://dl.espressif.com/dl/package_esp32_index.json
+    -Go to Tools → Boards Manager → Install the respective board package.
 
   3. Set Up the Blynk App
     Download the Blynk IoT App from the Play Store or App Store.

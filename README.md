@@ -3,11 +3,11 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
 
 
 **Hardware Requirements:**
--Gas Sensor (e.g., MQ-2 for LPG, CO, and smoke detection)
--Microcontroller (e.g., ESP8266 NodeMCU or ESP32)
--Breadboard and jumper wires
--USB cable for programming
--Power supply (if needed)
+1. Gas Sensor (e.g., MQ-2 for LPG, CO, and smoke detection),
+2. Microcontroller (e.g., ESP8266 NodeMCU or ESP32),
+3. Breadboard and jumper wires,
+4. USB cable for programming,
+5. Power supply (if needed)
 
 
 **Steps to Display Gas Sensor Data in Blynk**

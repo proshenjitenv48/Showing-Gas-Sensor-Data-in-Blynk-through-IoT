@@ -35,41 +35,41 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
 - Add a Gauge Widget or Label Widget to display the gas sensor data.
   - Set the Virtual Pin (Vx) for the widget (e.g., V0).
 
-5. Write the Arduino Code
+**4. Write the Arduino Code**
 Here’s an example code to read gas sensor data and send it to Blynk:
 
-#define BLYNK_TEMPLATE_ID "YourTemplateID"
-#define BLYNK_DEVICE_NAME "YourDeviceName"
-#define BLYNK_AUTH_TOKEN "YourAuthToken"
-
-#include <ESP8266WiFi.h>
-#include <BlynkSimpleEsp8266.h>
-
-char auth[] = "YourAuthToken"; // Replace with your Blynk Auth Token
-char ssid[] = "YourWiFiSSID";  // Replace with your WiFi SSID
-char pass[] = "YourWiFiPassword"; // Replace with your WiFi Password
-
-int gasSensorPin = A0; // Analog pin connected to the gas sensor
-int gasValue;          // Variable to store gas sensor reading
-
-BlynkTimer timer;
-
-void sendSensorData() {
-  gasValue = analogRead(gasSensorPin); // Read analog value from the gas sensor
-  Blynk.virtualWrite(V0, gasValue);   // Send gas value to Blynk on Virtual Pin V0
-}
-
-void setup() {
-  Serial.begin(115200);
-  Blynk.begin(auth, ssid, pass);
+  #define BLYNK_TEMPLATE_ID "YourTemplateID"
+  #define BLYNK_DEVICE_NAME "YourDeviceName"
+  #define BLYNK_AUTH_TOKEN "YourAuthToken"
   
-  timer.setInterval(1000L, sendSensorData); // Send data to Blynk every second
-}
-
-void loop() {
-  Blynk.run();
-  timer.run(); // Run the timer
-}
+  #include <ESP8266WiFi.h>
+  #include <BlynkSimpleEsp8266.h>
+  
+  char auth[] = "YourAuthToken"; // Replace with your Blynk Auth Token
+  char ssid[] = "YourWiFiSSID";  // Replace with your WiFi SSID
+  char pass[] = "YourWiFiPassword"; // Replace with your WiFi Password
+  
+  int gasSensorPin = A0; // Analog pin connected to the gas sensor
+  int gasValue;          // Variable to store gas sensor reading
+  
+  BlynkTimer timer;
+  
+  void sendSensorData() {
+    gasValue = analogRead(gasSensorPin); // Read analog value from the gas sensor
+    Blynk.virtualWrite(V0, gasValue);   // Send gas value to Blynk on Virtual Pin V0
+  }
+  
+  void setup() {
+    Serial.begin(115200);
+    Blynk.begin(auth, ssid, pass);
+    
+    timer.setInterval(1000L, sendSensorData); // Send data to Blynk every second
+  }
+  
+  void loop() {
+    Blynk.run();
+    timer.run(); // Run the timer
+  }
 5. Upload the Code
 Connect your microcontroller to the computer via USB.
 Select the correct board and port in the Arduino IDE.

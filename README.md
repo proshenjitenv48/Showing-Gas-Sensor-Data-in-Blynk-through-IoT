@@ -38,6 +38,7 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
   - Set the Virtual Pin (Vx) for the widget (e.g., V0).
 
 
+
 **4. Write the Arduino Code**
 
 _Here’s an example code to read gas sensor data and send it to Blynk:_

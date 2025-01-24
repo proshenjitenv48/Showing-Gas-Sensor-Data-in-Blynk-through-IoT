@@ -14,9 +14,9 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
   
 **1. Set up the Gas Sensor**
 Connect the gas sensor to the microcontroller:
-I. VCC to 3.3V or 5V (depending on the sensor specs),
-II. GND to Ground,
-III. AO (Analog Output) to an Analog pin on the microcontroller (e.g., A0 on ESP8266).
+*VCC to 3.3V or 5V (depending on the sensor specs),
+*GND to Ground,
+*AO (Analog Output) to an Analog pin on the microcontroller (e.g., A0 on ESP8266).
   
 **2. Install Necessary Software**
 -Download and install the Arduino IDE.

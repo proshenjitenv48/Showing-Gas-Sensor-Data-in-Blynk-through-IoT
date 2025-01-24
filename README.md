@@ -18,6 +18,7 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
   - GND to Ground,
   - AO (Analog Output) to an Analog pin on the microcontroller (e.g., A0 on ESP8266).
   
+
 **2. Install Necessary Software**
 - Download and install the Arduino IDE.
 - Install the required libraries:
@@ -27,6 +28,7 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
     - ESP32: https://dl.espressif.com/dl/package_esp32_index.json
   - Go to Tools → Boards Manager → Install the respective board package.
 
+
 **3. Set Up the Blynk App**
 - Download the Blynk IoT App from the Play Store or App Store.
 - Create a new project.
@@ -34,6 +36,7 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
   - Note down the auth token that Blynk emails you.
 - Add a Gauge Widget or Label Widget to display the gas sensor data.
   - Set the Virtual Pin (Vx) for the widget (e.g., V0).
+
 
 **4. Write the Arduino Code**
 
@@ -60,27 +63,30 @@ _Here’s an example code to read gas sensor data and send it to Blynk:_
     Blynk.virtualWrite(V0, gasValue);   // Send gas value to Blynk on Virtual Pin V0
   }
   
-  void setup() {
-    Serial.begin(115200);
-    Blynk.begin(auth, ssid, pass);
-    
-    timer.setInterval(1000L, sendSensorData); // Send data to Blynk every second
-  }
-  
-  void loop() {
-    Blynk.run();
-    timer.run(); // Run the timer
-  }
+    void setup() {
+      Serial.begin(115200);
+      Blynk.begin(auth, ssid, pass);
+      
+      timer.setInterval(1000L, sendSensorData); // Send data to Blynk every second
+      }
+      
+    void loop() {
+      Blynk.run();
+      timer.run(); // Run the timer
+    }
+
 
 **5. Upload the Code**
 - Connect your microcontroller to the computer via USB.
 - Select the correct board and port in the Arduino IDE.
 - Upload the code.
 
+
 **6. View Data in the Blynk App**
 - Open the Blynk app.
 - Start your project.
 - You’ll see real-time gas sensor data displayed on the widget.
+
 
 **Tips:**
 - Calibrate the sensor: Some gas sensors require a warm-up period (e.g., 24-48 hours) for accurate readings.

@@ -28,8 +28,8 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
   - Go to Tools → Boards Manager → Install the respective board package.
 
 **3. Set Up the Blynk App**
--Download the Blynk IoT App from the Play Store or App Store.
--Create a new project.
+Download the Blynk IoT App from the Play Store or App Store.
+Create a new project.
   -Choose the microcontroller (ESP8266/ESP32) as the device.
   -Note down the auth token that Blynk emails you.
 -Add a Gauge Widget or Label Widget to display the gas sensor data.

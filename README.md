@@ -42,27 +42,27 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
 
 _Here’s an example code to read gas sensor data and send it to Blynk:_
 
-#define BLYNK_TEMPLATE_ID "YourTemplateID"
-#define BLYNK_DEVICE_NAME "YourDeviceName"
-#define BLYNK_AUTH_TOKEN "YourAuthToken"
+    #define BLYNK_TEMPLATE_ID "YourTemplateID"
+    #define BLYNK_DEVICE_NAME "YourDeviceName"
+    #define BLYNK_AUTH_TOKEN "YourAuthToken"
   
-  #include <ESP8266WiFi.h>
-  #include <BlynkSimpleEsp8266.h>
+    #include <ESP8266WiFi.h>
+    #include <BlynkSimpleEsp8266.h>
+    
+    char auth[] = "YourAuthToken"; // Replace with your Blynk Auth Token
+    char ssid[] = "YourWiFiSSID";  // Replace with your WiFi SSID
+    char pass[] = "YourWiFiPassword"; // Replace with your WiFi Password
+    
+    int gasSensorPin = A0; // Analog pin connected to the gas sensor
+    int gasValue;          // Variable to store gas sensor reading
+    
+    BlynkTimer timer;
   
-  char auth[] = "YourAuthToken"; // Replace with your Blynk Auth Token
-  char ssid[] = "YourWiFiSSID";  // Replace with your WiFi SSID
-  char pass[] = "YourWiFiPassword"; // Replace with your WiFi Password
-  
-  int gasSensorPin = A0; // Analog pin connected to the gas sensor
-  int gasValue;          // Variable to store gas sensor reading
-  
-  BlynkTimer timer;
-  
-  void sendSensorData() {
-    gasValue = analogRead(gasSensorPin); // Read analog value from the gas sensor
-    Blynk.virtualWrite(V0, gasValue);   // Send gas value to Blynk on Virtual Pin V0
-  }
-  
+      void sendSensorData() {
+        gasValue = analogRead(gasSensorPin); // Read analog value from the gas sensor
+        Blynk.virtualWrite(V0, gasValue);   // Send gas value to Blynk on Virtual Pin V0
+      }
+      
     void setup() {
       Serial.begin(115200);
       Blynk.begin(auth, ssid, pass);

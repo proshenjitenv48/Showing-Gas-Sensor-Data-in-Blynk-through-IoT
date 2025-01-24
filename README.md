@@ -20,20 +20,20 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
   
 **2. Install Necessary Software**
 -Download and install the Arduino IDE.
--Install the required libraries:
+Install the required libraries:
   -Blynk Library: Go to Arduino IDE → Tools → Manage Libraries → Search for “Blynk” and install it.
   -ESP8266/ESP32 Board Package: Add the board URL in Arduino IDE (File → Preferences → Additional Board Manager URLs):
     -ESP8266: http://arduino.esp8266.com/stable/package_esp8266com_index.json
     -ESP32: https://dl.espressif.com/dl/package_esp32_index.json
-  -Go to Tools → Boards Manager → Install the respective board package.
+    Go to Tools → Boards Manager → Install the respective board package.
 
-  3. Set Up the Blynk App
-    Download the Blynk IoT App from the Play Store or App Store.
-    Create a new project.
-    Choose the microcontroller (ESP8266/ESP32) as the device.
-    Note down the auth token that Blynk emails you.
-    Add a Gauge Widget or Label Widget to display the gas sensor data.
-    Set the Virtual Pin (Vx) for the widget (e.g., V0).
+**3. Set Up the Blynk App**
+-Download the Blynk IoT App from the Play Store or App Store.
+-Create a new project.
+  -Choose the microcontroller (ESP8266/ESP32) as the device.
+  -Note down the auth token that Blynk emails you.
+-Add a Gauge Widget or Label Widget to display the gas sensor data.
+  -Set the Virtual Pin (Vx) for the widget (e.g., V0).
 
 4. Write the Arduino Code
 Here’s an example code to read gas sensor data and send it to Blynk:

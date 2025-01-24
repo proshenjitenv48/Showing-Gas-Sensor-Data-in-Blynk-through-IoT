@@ -36,7 +36,9 @@ To show gas sensor data in Blynk through IoT, you’ll need to use a gas sensor 
   - Set the Virtual Pin (Vx) for the widget (e.g., V0).
 
 **4. Write the Arduino Code**
+
 _Here’s an example code to read gas sensor data and send it to Blynk:_
+
 #define BLYNK_TEMPLATE_ID "YourTemplateID"
 #define BLYNK_DEVICE_NAME "YourDeviceName"
 #define BLYNK_AUTH_TOKEN "YourAuthToken"
@@ -69,16 +71,18 @@ _Here’s an example code to read gas sensor data and send it to Blynk:_
     Blynk.run();
     timer.run(); // Run the timer
   }
-5. Upload the Code
-Connect your microcontroller to the computer via USB.
-Select the correct board and port in the Arduino IDE.
-Upload the code.
-6. View Data in the Blynk App
-Open the Blynk app.
-Start your project.
-You’ll see real-time gas sensor data displayed on the widget.
-Tips:
-Calibrate the sensor: Some gas sensors require a warm-up period (e.g., 24-48 hours) for accurate readings.
-Add thresholds/alerts: Use Blynk notifications to alert you when gas levels exceed a safe threshold.
-Test connections: Double-check wiring and power supply.
-Would you like assistance with any specific part, like troubleshooting, or customizing the project further?
+
+**5. Upload the Code**
+- Connect your microcontroller to the computer via USB.
+- Select the correct board and port in the Arduino IDE.
+- Upload the code.
+
+**6. View Data in the Blynk App**
+- Open the Blynk app.
+- Start your project.
+- You’ll see real-time gas sensor data displayed on the widget.
+
+**Tips:**
+- Calibrate the sensor: Some gas sensors require a warm-up period (e.g., 24-48 hours) for accurate readings.
+- Add thresholds/alerts: Use Blynk notifications to alert you when gas levels exceed a safe threshold.
+- Test connections: Double-check wiring and power supply.
